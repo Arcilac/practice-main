@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: blue;">Gatos</title>
+    <style>
+        section {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            color: blue;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        img {
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+   <h1>Gatos app</h1> 
+
+   <section id="ramdomMichis">
+    <h2>Gatos aleatorios</h2>
+
+    <span id="error"></span>
+    <article>
+        <img id="img1" width="200" alt="Fotos gatos" style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+        <button id="btn1">Guardar en Favoritos</button>
+    </article>
+    <article>
+        <img id="img2" width="200" alt="Fotos gatos" style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+        <button id="btn2">Guardar en Favoritos</button>
+    </article>
+ 
+   <button onclick="loadRamdonMichis()">Recargar</button>
+
+   </section>
+
+   <section id="uploadingMichi">
+    <h2>Sube una foto de gato</h2>
+    <form id="uploadingForm">
+    <input id="file" type="file" name="file"/>
+    <button type="button" onclick="uploadMichiPhoto()">Enviar</button>
+    </form>
+   </section>
+
+   <section id="favouriteMichis">
+    <h2>Gatos Favoritos</h2>
+    <article>
+        <img id="img1" width="200" alt="Fotos gatos" style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+        <button>Sacar de Favoritos</button>
+    </article>
+   </section>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="./main.js"></script>
+</body>
+</html>
